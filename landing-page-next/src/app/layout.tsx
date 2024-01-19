@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Next",
-  description: "Next UI/UX for class",
+  title: "Travel",
+  description: "Travel UI/UX App for Camping",
 };
 
 export default function RootLayout({
@@ -18,9 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Navbar />
-      <body>{children}</body>
-      <Footer />
+      <body>
+        <Navbar />
+        <main className="relative overflow-hidden">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
